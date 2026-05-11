@@ -1,0 +1,4 @@
+interface:
+  display_name: "LAMMPS Reference"
+  short_description: "LAMMPS manual and tutorial lookup"
+  default_prompt: "Use $lammps-reference to answer a LAMMPS input-script or command question from the local manual and tutorials."

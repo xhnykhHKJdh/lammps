@@ -1,0 +1,6 @@
+# Keep the GitHub repo lightweight. These references are large and local-machine specific.
+lammps-reference/references/lammps-manual-22Jul2025.txt
+lammps-reference/references/lammpstutorials.github.io/
+
+__pycache__/
+*.pyc

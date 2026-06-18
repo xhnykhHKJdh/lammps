@@ -6,7 +6,7 @@ This directory is the minimal runnable package for another computer.
 
 - 12 nucleosomes, left terminal linker = 200 beads = 2100 bp.
 - Right terminal linker = 95 beads = 997.5 bp.
-- SMC has already been inserted into `data.hybrid_smc_nicg`.
+- SMC has already been inserted into the hybrid data stored in `data_chunks/`.
 - Units: LAMMPS `real`, length in Angstrom.
 - Timestep: 10 fs.
 - Tension: 0.1 pN addforce on atom 499 and atom 498.
@@ -16,7 +16,8 @@ This directory is the minimal runnable package for another computer.
 
 ## Files
 
-- `data.hybrid_smc_nicg`: starting NICG+SMC hybrid data.
+- `data_chunks/data.hybrid_smc_nicg.part_*`: split starting NICG+SMC hybrid data.
+- `assemble_data.py`: rebuilds `data.hybrid_smc_nicg` from the chunks.
 - `in.bond_settings`: NICG bond settings included by LAMMPS inputs.
 - `generate_random50cycle_replicates.py`: creates 3 replicate run directories and schedules.
 - `run_replicates_with_retry.py`: runs prep + 50 cycles with retry from per-cycle checkpoints.
@@ -24,7 +25,10 @@ This directory is the minimal runnable package for another computer.
 
 ## Generate replicate inputs
 
+First assemble the data file, then generate replicate inputs:
+
 ```bash
+python3 assemble_data.py
 python3 generate_random50cycle_replicates.py
 ```
 

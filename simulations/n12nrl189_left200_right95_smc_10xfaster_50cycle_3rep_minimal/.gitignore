@@ -1,0 +1,21 @@
+# Large run outputs
+dump.*.lammpstrj
+boundary.*.lammpstrj
+restart.*
+data.after_*
+log.*
+screen.*
+launcher.*.stdout
+launcher.*.stderr
+failed_attempts/
+runner_report.txt
+failure_report.txt
+
+# OVITO outputs generated after production
+ovito.*.xyz
+*.trajectory.xyz
+*.final.xyz
+
+# Python cache
+__pycache__/
+*.pyc
